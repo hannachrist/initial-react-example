@@ -4,6 +4,7 @@ import cats from './cats';
 import FrameForImage from './FrameForImage';
 import TrafficLights from './components/TrafficLights/TrafficLights';
 import DesktopFan from './components/DesktopFan/DesktopFan';
+import Clock from './components/Clock/Clock';
 
 import './App.css';
 
@@ -43,6 +44,16 @@ const App = () => (
             >
                 Desktop fan
             </a>
+
+            <a
+                href="/?page=clock"
+                className={
+                    'sidebar-navigation-item ' +
+                    (window.location.search === '?page=clock' && 'sidebar-navigation-item--active')
+                }    
+            >
+                Clock
+            </a>
         </div>
 
         <div className="main-section main-section--with-left-sidebar">
@@ -52,6 +63,8 @@ const App = () => (
                 {window.location.search === '?page=traffic-lights' && 'Traffic lights'}
 
                 {window.location.search === '?page=desktop-fan' && 'Desktop fan'}
+
+                {window.location.search === '?page=desktop-fan' && 'Clock'}
             </div>
 
             {window.location.search === '' && (
@@ -119,7 +132,20 @@ const App = () => (
 
                     <DesktopFan isOn={true} />
                     <DesktopFan isOn={false} />
+                </div>
+            )}
 
+            {window.location.search === '?page=clock' && (
+                <div className="main-section__content">
+                    <h1>
+                    What a lovely clock!
+                    </h1>
+
+                    <Clock 
+                        hh={10}
+                        mm={15}
+                        sec={34}    
+                    />
                 </div>
             )}
         </div>

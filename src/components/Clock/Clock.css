@@ -1,0 +1,39 @@
+.clock {
+    background-color: #CBD4E4;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+
+    position: relative;
+}
+
+.clock__hand {
+    width: 180px;
+    height: 8px;
+    background-color: black;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform-origin: center left;
+    
+}
+
+.clock__hand--hour {
+    background-color: #494973;
+    width: 120px;
+    height: 10px;
+
+}
+
+.clock__hand--minutes {
+    background-color: #494973;
+    width: 160px;
+}
+
+.clock__hand--seconds {
+    background-color: #965266;
+    height: 4px;
+}
+
