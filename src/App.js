@@ -2,6 +2,8 @@ import React from 'react';
 
 import cats from './cats';
 import FrameForImage from './FrameForImage';
+import TrafficLights from './components/TrafficLights/TrafficLights';
+import DesktopFan from './components/DesktopFan/DesktopFan';
 
 import './App.css';
 
@@ -31,6 +33,16 @@ const App = () => (
             >
                 Traffic lights
             </a>
+
+            <a
+                href="/?page=desktop-fan"
+                className={
+                    'sidebar-navigation-item ' +
+                    (window.location.search === '?page=desktop-fan' && 'sidebar-navigation-item--active')
+                }    
+            >
+                Desktop fan
+            </a>
         </div>
 
         <div className="main-section main-section--with-left-sidebar">
@@ -38,6 +50,8 @@ const App = () => (
                 {window.location.search === '' && 'Cats gallery'}
 
                 {window.location.search === '?page=traffic-lights' && 'Traffic lights'}
+
+                {window.location.search === '?page=desktop-fan' && 'Desktop fan'}
             </div>
 
             {window.location.search === '' && (
@@ -67,18 +81,47 @@ const App = () => (
                         {cats[2].description}
                     </FrameForImage>
                 </div>
-                )}
+            )}
 
-                {window.location.search === '?page=traffic-lights' && (
-                    <div className="main-section__content">
-                        <h1>
-                            Traffic lights around the world
-                        </h1>
+            {window.location.search === '?page=traffic-lights' && (
+                <div className="main-section__content">
+                    <h1>
+                        Traffic lights
+                    </h1>
 
-                            coming soon
+                    <TrafficLights
+                        greenIsOn={true}
+                        yellowIsOn={false}
+                        redIsOn={false}
+                    />
 
-                    </div>
-                )}
+                    <TrafficLights
+                        greenIsOn={false}
+                        yellowIsOn={true}
+                        redIsOn={false}
+                    />
+
+                    <TrafficLights
+                        greenIsOn={false}
+                        yellowIsOn={false}
+                        redIsOn={true}
+                    />
+                    
+
+                </div>
+            )}
+
+            {window.location.search === '?page=desktop-fan' && (
+                <div className="main-section__content">
+                    <h1>
+                        Desktop fan
+                    </h1>
+
+                    <DesktopFan isOn={true} />
+                    <DesktopFan isOn={false} />
+
+                </div>
+            )}
         </div>
     </div>
 );
