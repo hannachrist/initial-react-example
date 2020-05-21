@@ -1,0 +1,152 @@
+.speedometer {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+
+    position: relative;
+}
+
+.scale {
+    width: 30px;
+    height: 25px;
+    color: white;
+    /* border: 1px solid red; */
+    display: inline-block;
+    font-size: 22px;
+
+    position: absolute;
+}
+
+.scale.zero {
+    left: 27%;
+    top: 68%;
+}
+
+.scale.twenty {
+    left: 18%;
+    top: 53%;
+}
+
+.scale.forty {
+    left: 18%;
+    top: 38%;
+}
+
+.scale.sixty {
+    left: 25%;
+    top: 25%;
+}
+
+.scale.eighty {
+    left: 39%;
+    top: 17%;
+}
+
+.scale.hundred {
+    left: 54%;
+    top: 17%;
+}
+
+.scale.hundred-twenty {
+    left: 68%;
+    top: 25%;
+}
+
+.scale.hundred-forty {
+    left: 76%;
+    top: 38%;
+}
+
+.scale.hundred-sixty {
+    left: 75%;
+    top: 53%;
+}
+
+.scale.hundred-eighty {
+    left: 68%;
+    top: 68%;
+}
+
+.scalemarker {
+    width: 155px;
+    height: 8px;
+    /* background-color: red; */
+    display: inline-block;
+    border-right: 28px solid white;
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.scalemarker.zero {
+    transform-origin: center left;
+    transform: rotate(135deg);
+}
+
+.scalemarker.twenty {
+    transform-origin: center left;
+    transform: rotate(165deg);
+}
+
+.scalemarker.forty {
+    transform-origin: center left;
+    transform: rotate(195deg);
+}
+
+.scalemarker.sixty {
+    transform-origin: center left;
+    transform: rotate(225deg);
+}
+
+.scalemarker.sixty {
+    transform-origin: center left;
+    transform: rotate(225deg);
+}
+
+.scalemarker.eighty {
+    transform-origin: center left;
+    transform: rotate(255deg);
+}
+
+.scalemarker.hundred {
+    transform-origin: center left;
+    transform: rotate(285deg);
+}
+
+.scalemarker.hundred-twenty {
+    transform-origin: center left;
+    transform: rotate(315deg);
+}
+
+.scalemarker.hundred-forty {
+    transform-origin: center left;
+    transform: rotate(345deg);
+}
+
+.scalemarker.hundred-sixty {
+    transform-origin: center left;
+    transform: rotate(15deg);
+}
+
+.scalemarker.hundred-eighty {
+    transform-origin: center left;
+    transform: rotate(45deg);
+}
+
+
+.hand {
+    width: 180px;
+    height: 5px;
+    background-color: rgb(50, 153, 250);
+    display: inline-block;
+    z-index: 2;
+    
+    position: absolute;
+
+    transform: rotate(270deg);
+    transform-origin: center left;
+    left: 50%;
+    top: 50%;
+}

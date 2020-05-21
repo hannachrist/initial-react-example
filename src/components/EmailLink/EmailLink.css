@@ -1,0 +1,27 @@
+.email-container {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.anchor {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.circle {
+    border-radius: 50%;
+    /* border: 1px solid black; */
+    width: 18px;
+    height: 18px;
+    padding: 5px ;
+    background-color: #00B2FF;
+    color: white;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+.number {
+    
+}

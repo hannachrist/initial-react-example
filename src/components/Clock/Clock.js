@@ -8,8 +8,8 @@ const Clock = (props) => {
     const secondHandAngle = -90 + (360 / 60) * props.sec;
 
     const styleHrs = { transform: `rotate(${hourHandAngle}deg)` };
-  const styleMinutes = { transform: `rotate(${minuteHandAngle}deg)` };
-  const styleSeconds = { transform: `rotate(${secondHandAngle}deg)` };
+    const styleMinutes = { transform: `rotate(${minuteHandAngle}deg)` };
+    const styleSeconds = { transform: `rotate(${secondHandAngle}deg)` };
 
     return (
         <div className='clock'>

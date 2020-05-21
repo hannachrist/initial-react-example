@@ -1,10 +1,13 @@
 import React from 'react';
 
-import cats from './cats';
+import cats from './components/cats';
 import FrameForImage from './FrameForImage';
 import TrafficLights from './components/TrafficLights/TrafficLights';
 import DesktopFan from './components/DesktopFan/DesktopFan';
 import Clock from './components/Clock/Clock';
+import NotificationLink from './components/NotificationLink/NotificationLink';
+import EmailLink from './components/EmailLink/EmailLink';
+import SpeedOMeter from './components/SpeedOMeter/SpeedOMeter';
 
 import './App.css';
 
@@ -54,6 +57,37 @@ const App = () => (
             >
                 Clock
             </a>
+
+            <a
+                href="/?page=notifications"
+                className={
+                    'sidebar-navigation-item ' +
+                    (window.location.search === '?page=notifications' && 'sidebar-navigation-item--active')
+                }
+            >
+                Notifications
+            </a>
+
+            <a
+                href="/?page=email-link" 
+                className={
+                    'sidebar-navigation-item ' +
+                    (window.location.search === '?page=email-link' && 'sidebar-navigation-item--active')
+                }
+            >
+                Emails
+            </a>
+
+            <a
+                href="/?page=speedometer" 
+                className={
+                    'sidebar-navigation-item ' +
+                    (window.location.search === '?page=speedometer' && 'sidebar-navigation-item--active')
+                }
+            >
+                Speedometer
+            </a>
+
         </div>
 
         <div className="main-section main-section--with-left-sidebar">
@@ -64,7 +98,13 @@ const App = () => (
 
                 {window.location.search === '?page=desktop-fan' && 'Desktop fan'}
 
-                {window.location.search === '?page=desktop-fan' && 'Clock'}
+                {window.location.search === '?page=clock' && 'Clock'}
+
+                {window.location.search === '?page=notifications' && 'Notifications'}
+
+                {window.location.search === '?page=email-link' && 'Emails'}
+
+                {window.location.search === '?page=speedometer' && 'Speedometer'}
             </div>
 
             {window.location.search === '' && (
@@ -147,6 +187,65 @@ const App = () => (
                         sec={34}    
                     />
                 </div>
+            )}
+
+            {window.location.search === '?page=notifications' && (
+                <div className="main-section__content">
+                <h1>
+                    New Notifications?
+                </h1>
+
+                <NotificationLink
+                    href="/?page=notifications"
+                    haveUnread={true}
+                />
+
+                <NotificationLink
+                    href="/?page=notifications"
+                    haveUnread={false}
+                />
+
+                <NotificationLink
+                    href="/?page=notifications"
+                />
+
+                </div>
+            )}
+
+            {window.location.search === '?page=email-link' && (
+                <div className="main-section__content">
+                    <h1>
+                        Emails
+                    </h1>
+
+                    <EmailLink
+                        href="/?page=emails"
+                        numberOfUnread={10}
+                    />
+
+                    <EmailLink
+                        href="/?page=emails"
+                        numberOfUnread={0}
+                    />
+
+                    <EmailLink
+                        href="/?page=emails"
+                    />
+                </div>
+            )}
+
+            {window.location.search === '?page=speedometer' && (
+                <div className="main-section__content">
+                    <h1>
+                        Leadfoot?
+                    </h1>
+
+                    <SpeedOMeter speed={0} />
+
+                    <SpeedOMeter speed={120} />
+                    
+                    <SpeedOMeter speed={200} />
+                </div>    
             )}
         </div>
     </div>
