@@ -12,8 +12,8 @@
 .circle {
     border-radius: 50%;
     /* border: 1px solid black; */
-    width: 18px;
-    height: 18px;
+    min-width: 18px;
+    min-height: 18px;
     padding: 5px ;
     background-color: #00B2FF;
     color: white;
