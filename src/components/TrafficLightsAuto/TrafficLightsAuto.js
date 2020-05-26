@@ -8,19 +8,27 @@ class TrafficLightsAuto extends React.Component {
 
         this.state = {
             greenIsOn: false,
-            redIsOn: false,
+            redIsOn: true,
             yellowIsOn: false,
             previousLight: 'green',
         };
     }
 
     render() {
+        const {
+            greenIsOn = false,
+            redIsOn = true,
+            yellowIsOn = false,
+            previousLight = 'green',
+        } = this.state;
+
+
         return (
             <div className="traffic-lights-controlled">
                 <TrafficLights
-                    greenIsOn={this.state.greenIsOn}
-                    redIsOn={this.state.redIsOn}
-                    yellowIsOn={this.state.yellowIsOn}
+                    greenIsOn={greenIsOn}
+                    redIsOn={redIsOn}
+                    yellowIsOn={yellowIsOn}
                 />
             </div>
         )

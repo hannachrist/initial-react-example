@@ -1,0 +1,13 @@
+.form-container {
+    margin-bottom: 20px;
+}
+
+.form.text {
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.btn.save {
+    padding: 7px 20px;
+    cursor: pointer;
+}

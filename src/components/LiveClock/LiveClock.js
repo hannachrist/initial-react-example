@@ -13,6 +13,12 @@ class LiveClock extends React.Component {
             seconds: myDate.getSeconds(),
         }
     }
+
+    // const {
+    //     hours = myDate.getHours(),
+    //     minutes = myDate.getMinutes(),
+    //     seconds = myDate.getSeconds(),
+    // } = this.state;
     
     render () {
        return (

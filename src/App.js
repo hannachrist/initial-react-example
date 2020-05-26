@@ -13,9 +13,12 @@ import TrafficLightsControlledWithButtons from './components/TrafficLightsContro
 import TrafficLightsAuto from './components/TrafficLightsAuto/TrafficLightsAuto';
 import LiveClock from './components/LiveClock/LiveClock';
 import LightBulb from './components/LightBulb/LightBulb';
+import AddressBook from './components/AddressBook';
 
 
 import './App.css';
+import AddressBookForm from './components/AddressBookForm/AddressBookForm';
+import AddressBookList from './components/AddressBookList/AddressBookList';
 
 const App = () => (
     <div className="app">
@@ -144,6 +147,16 @@ const App = () => (
                 Light bulb
             </a>
 
+            <a
+                href="/?page=address-book"
+                className={
+                    'sidebar-navigation-item ' +
+                    (window.location.search === '?page=address-book' && 'sidebar-navigation-item--active')
+                }    
+            >
+                Address book
+            </a>
+
         </div>
 
 
@@ -172,6 +185,8 @@ const App = () => (
                 {window.location.search === '?page=live-clock' && 'Live Clock'}
 
                 {window.location.search === '?page=light-bulb' && 'Light bulb'}
+
+                {window.location.search === '?page=address-book' && 'Address book'}
             </div>
 
             {window.location.search === '' && (
@@ -352,7 +367,7 @@ const App = () => (
 
                     <TrafficLightsAuto />
                 </div>    
-            )} 
+            )}
 
             {window.location.search === '?page=live-clock' && (
                 <div className="main-section__content">
@@ -372,7 +387,19 @@ const App = () => (
 
                     <LightBulb />
                 </div>    
-            )}         
+            )}
+
+            {window.location.search === '?page=address-book' && (
+                <div className="main-section__content">
+                    <h1>
+                        Address book
+                    </h1>
+
+                    <AddressBook />
+
+                    {/* <AddressBookList /> */}
+                </div>    
+            )}
         </div>
     </div>
 );

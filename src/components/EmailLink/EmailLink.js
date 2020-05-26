@@ -4,13 +4,18 @@ import emailIcon from './email-icon.svg';
 import './EmailLink.css';
 
 const EmailLink = (props) => {
+    const {
+        href,
+        numberOfUnread,
+    } = props;
+    
     return (
         <div className='email-container'>
-            <a href={ props.href } className='anchor'>
+            <a href={ href } className='anchor'>
                 <img src={emailIcon} className='icon'/>
-                { props.numberOfUnread ?
+                { numberOfUnread ?
                 (<span className='circle'>
-                { props.numberOfUnread }
+                { numberOfUnread }
                 </span>) :
                 ''
                 }  

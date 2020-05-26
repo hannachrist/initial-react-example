@@ -4,16 +4,19 @@ import './SpeedOMeter.css';
 
 class SpeedOMeter extends React.Component {
     render () {
+
+        const { speed } = this.props;
+
         const handAngle =
-            (this.props.speed < 180) ? 
-            (135 + this.props.speed * 1.5) :
+            (speed < 180) ? 
+            (135 + speed * 1.5) :
             (135 + 180 * 1.5)
         ;
         
         const styleHandAngle = { transform: `rotate(${handAngle}deg)` };
 
         const styleRed =
-            (this.props.speed > 180) ?
+            (speed > 180) ?
             {backgroundColor: 'tomato'} :
             {backgroundColor: 'black'}
         ;
