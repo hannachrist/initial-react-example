@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './FrameForImage.css'
+import './FrameForImage.css';
 
 const FrameForImage = (props) => {
     const { header, image, children } = props;
