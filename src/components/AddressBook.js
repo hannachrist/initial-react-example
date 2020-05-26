@@ -84,7 +84,7 @@ class AddressBook extends React.Component {
                                                 users: updatedUsers,
                                             })
                                         }}/>
-                                    </div>    
+                                    </div>
 
                                     {/* <input className="btn save" type="submit" value="Save" /> */}
                                 </form>
