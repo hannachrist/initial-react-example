@@ -16,6 +16,7 @@ import PianoKeysPage from './pages/PianoKeysPage';
 import LiveClockPage from './pages/LiveClockPage';
 import AddressBookPage from './pages/AddressBookPage';
 import PianoKeysSmartPage from './pages/PianoKeysSmartPage';
+import ImageSwitcherPage from './pages/ImageSwitcherPage';
 
 import './App.css';
 
@@ -52,6 +53,8 @@ const App = () => (
                 {window.location.search === '?page=light-bulb' && 'Light bulb'}
 
                 {window.location.search === '?page=address-book' && 'Address book'}
+
+                {window.location.search === '?page=image-switcher' && 'Image switcher'}
             </div>
 
             {window.location.search === '' && <FrameForImagePage />}
@@ -89,6 +92,8 @@ const App = () => (
             )} */}
 
             {window.location.search === '?page=address-book' && <AddressBookPage />}
+
+            {window.location.search === '?page=image-switcher' && <ImageSwitcherPage />}
         </div>
     </div>
 );

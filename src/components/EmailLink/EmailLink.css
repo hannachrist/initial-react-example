@@ -3,13 +3,13 @@
     margin-right: 50px;
 }
 
-.anchor {
+.email-container__anchor {
     text-decoration: none;
     position: relative;
     display: inline-block;
 }
 
-.circle {
+.email-container__circle {
     border-radius: 50%;
     /* border: 1px solid black; */
     min-width: 18px;
@@ -20,8 +20,4 @@
     position: absolute;
     top: -5px;
     right: -10px;
-}
-
-.number {
-    
 }

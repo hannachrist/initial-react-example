@@ -11,10 +11,10 @@ const EmailLink = (props) => {
     
     return (
         <div className='email-container'>
-            <a href={ href } className='anchor'>
+            <a href={ href } className='email-container__anchor'>
                 <img src={emailIcon} className='icon'/>
                 { numberOfUnread ?
-                (<span className='circle'>
+                (<span className='email-container__circle'>
                 { numberOfUnread }
                 </span>) :
                 ''

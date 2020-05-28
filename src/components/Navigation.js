@@ -47,6 +47,16 @@ const Navigation = () => (
         </a>
 
         <a
+            href="/?page=live-clock"
+            className={
+                'sidebar-navigation-item ' +
+                (window.location.search === '?page=live-clock' && 'sidebar-navigation-item--active')
+            }    
+        >
+            Live Clock
+        </a>
+
+        <a
             href="/?page=notifications"
             className={
                 'sidebar-navigation-item ' +
@@ -117,16 +127,6 @@ const Navigation = () => (
         </a>
 
         <a
-            href="/?page=live-clock"
-            className={
-                'sidebar-navigation-item ' +
-                (window.location.search === '?page=live-clock' && 'sidebar-navigation-item--active')
-            }    
-        >
-            Live Clock
-        </a>
-
-        <a
             href="/?page=address-book"
             className={
                 'sidebar-navigation-item ' +
@@ -134,6 +134,16 @@ const Navigation = () => (
             }    
         >
             Address book
+        </a>
+
+        <a
+            href="/?page=image-switcher"
+            className={
+                'sidebar-navigation-item ' +
+                (window.location.search === '?page=image-switcher' && 'sidebar-navigation-item--active')
+            }    
+        >
+            Image switcher
         </a>
 
     </div>
