@@ -45,7 +45,7 @@ class ImageSwitcher extends React.Component {
                     <div className='uppersection__side'>
                         <div 
                             className='uppersection__side__arrow arrow--right'
-                            onClick={ this.switchToNxtImg() }
+                            // onClick={ this.switchToNxtImg() }
                         >
                         </div>
                     </div>

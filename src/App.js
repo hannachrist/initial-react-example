@@ -17,6 +17,7 @@ import LiveClockPage from './pages/LiveClockPage';
 import AddressBookPage from './pages/AddressBookPage';
 import PianoKeysSmartPage from './pages/PianoKeysSmartPage';
 import ImageSwitcherPage from './pages/ImageSwitcherPage';
+import TemperatureChartPage from './pages/TemperatureChartPage';
 
 import './App.css';
 
@@ -55,6 +56,8 @@ const App = () => (
                 {window.location.search === '?page=address-book' && 'Address book'}
 
                 {window.location.search === '?page=image-switcher' && 'Image switcher'}
+
+                {window.location.search === '?page=temperature-chart' && 'Temperature chart'}
             </div>
 
             {window.location.search === '' && <FrameForImagePage />}
@@ -73,7 +76,7 @@ const App = () => (
 
             {window.location.search === '?page=pianokeys' && <PianoKeysPage />}
 
-            {window.location.search === '?page=pianokeys-smart' && <PianoKeysSmartPage />}
+            {/* {window.location.search === '?page=pianokeys-smart' && <PianoKeysSmartPage />} */}
 
             {window.location.search === '?page=traffic-lights-controlled' && <TrafficLightsButtonPage />}    
 
@@ -94,6 +97,8 @@ const App = () => (
             {window.location.search === '?page=address-book' && <AddressBookPage />}
 
             {window.location.search === '?page=image-switcher' && <ImageSwitcherPage />}
+
+            {window.location.search === '?page=temperature-chart' && <TemperatureChartPage />}
         </div>
     </div>
 );

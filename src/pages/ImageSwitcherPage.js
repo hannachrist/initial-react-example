@@ -10,6 +10,7 @@ const ImageSwitcherPage = () => (
 
         <ImageSwitcher>
             <img src='https://p2.piqsels.com/preview/180/610/522/coffee-cafe-hot-mug.jpg' />
+            {/* <img src={} /> */}
         </ImageSwitcher>
     </div>
 );

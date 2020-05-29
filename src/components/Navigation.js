@@ -96,7 +96,7 @@ const Navigation = () => (
             Pianokeys
         </a>
 
-        <a
+        {/* <a
             href="/?page=pianokeys-smart" 
             className={
                 'sidebar-navigation-item ' +
@@ -104,7 +104,7 @@ const Navigation = () => (
             }
         >
             Pianokeys smart
-        </a>
+        </a> */}
 
         <a
             href="/?page=traffic-lights-controlled"
@@ -144,6 +144,16 @@ const Navigation = () => (
             }    
         >
             Image switcher
+        </a>
+
+        <a
+            href="/?page=temperature-chart"
+            className={
+                'sidebar-navigation-item ' +
+                (window.location.search === '?page=temperature-chart' && 'sidebar-navigation-item--active')
+            }    
+        >
+            Temperature chart
         </a>
 
     </div>
