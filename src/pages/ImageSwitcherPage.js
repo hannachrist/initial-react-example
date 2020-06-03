@@ -2,6 +2,11 @@ import React from 'react';
 
 import ImageSwitcher from '../components/ImageSwitcher/ImageSwitcher';
 
+import cappuccino from './cappuccino.jpg';
+import filterCoffee from './filter-coffee.jpg';
+import cezve from './cezve.jpg';
+import bialetti from './bialetti.jpg';
+
 const ImageSwitcherPage = () => (
     <div className="main-section__content">
         <h1>
@@ -9,8 +14,10 @@ const ImageSwitcherPage = () => (
         </h1>
 
         <ImageSwitcher>
-            <img src='https://p2.piqsels.com/preview/180/610/522/coffee-cafe-hot-mug.jpg' />
-            {/* <img src={} /> */}
+            <img src={cappuccino} />
+            <img src={filterCoffee} />
+            <img src={cezve} />
+            <img src={bialetti} />
         </ImageSwitcher>
     </div>
 );

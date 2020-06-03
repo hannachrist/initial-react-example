@@ -7,54 +7,62 @@ class ImageSwitcher extends React.Component {
        super(props);
 
         this.state = {
-            coffeeData: [
-                {
-                    imageUrl: 'https://p2.piqsels.com/preview/180/610/522/coffee-cafe-hot-mug.jpg'
-                },
-                {
-                    imageUrl: 'https://c1.wallpaperflare.com/preview/14/289/174/coffee-bean-coffee-cup-turkish-coffee.jpg'
-                },
-                {
-                    imageUrl: 'https://c2.peakpx.com/wallpaper/1014/819/663/5k-espresso-machine-filter-coffee-filters-wallpaper-preview.jpg'
-                },
-            ],    
-            currentIndex: 0,
+            currentImage: 0,
        };
-   }
-
-   switchToNxtImg() {
-        let newCurrentIndex = this.state.currentIndex;
-        newCurrentIndex = newCurrentIndex + 1;
-
-        this.setState({
-            currentIndex: newCurrentIndex,
-        });
-   }
+    }
    
     render () {
         return (
             <div className='slider'>
                 <div className='slider__uppersection'>
                     <div className='uppersection__side'>
-                        <a href='#' className='uppersection__side__arrow arrow--left'></a>
+                        <button 
+                            className='uppersection__side__arrow arrow--left'
+                            onClick={() => {
+                                this.setState({
+                                    currentImage: this.state.currentImage - 1
+                                });
+                            }}
+                            disabled={this.state.currentImage === 0}
+                        >
+                        </button>
                     </div>
                     <div className='uppersection__content'>
-                       {this.props.children}
+                       {this.props.children[this.state.currentImage]}
                     </div>
 
                     <div className='uppersection__side'>
-                        <div 
+                        <button 
                             className='uppersection__side__arrow arrow--right'
-                            // onClick={ this.switchToNxtImg() }
+                            onClick={() => {
+                                this.setState({
+                                    currentImage: this.state.currentImage + 1
+                                });
+                            }}
+                            disabled={this.state.currentImage === (this.props.children.length - 1)}
                         >
-                        </div>
+                        </button>
                     </div>
                 </div>
 
                 <div className='pagination'>
-                    <span className='pagination__dot pagination__dot--inactive'></span>
-                    <span className='pagination__dot pagination__dot--inactive'></span>
-                    <span className='pagination__dot pagination__dot--inactive'></span>
+                    {this.props.children.map((_, index) => {
+                        return (
+                            <span 
+                            className={ 'pagination__dot ' + (this.state.currentImage === index ? 'pagination__dot--active' : '')}
+                            onClick={() => {
+                                this.setState({
+                                    currentImage: index
+                                })
+                            }
+
+                            }
+                            >
+                            </span>
+                          )
+                            }
+                        )
+                    }
                 </div>
                 
             </div>
