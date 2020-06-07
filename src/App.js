@@ -18,6 +18,7 @@ import AddressBookPage from './pages/AddressBookPage';
 import PianoKeysSmartPage from './pages/PianoKeysSmartPage';
 import ImageSwitcherPage from './pages/ImageSwitcherPage';
 import TemperatureChartPage from './pages/TemperatureChartPage';
+import ModuleTabsPage from './pages/ModuleTabsPage';
 
 import './App.css';
 
@@ -29,17 +30,17 @@ const App = () => (
             <div className="main-section__toolbar">
                 {window.location.search === '' && 'Cats gallery'}
 
-                {window.location.search === '?page=traffic-lights' && 'Traffic lights'}
+                {/* {window.location.search === '?page=traffic-lights' && 'Traffic lights'} */}
 
                 {window.location.search === '?page=desktop-fan' && 'Desktop fan'}
 
                 {window.location.search === '?page=clock' && 'Clock'}
 
-                {window.location.search === '?page=notifications' && 'Notifications'}
+                {/* {window.location.search === '?page=notifications' && 'Notifications'} */}
 
                 {window.location.search === '?page=email-link' && 'Emails'}
 
-                {window.location.search === '?page=speedometer' && 'Speedometer'}
+                {/* {window.location.search === '?page=speedometer' && 'Speedometer'} */}
 
                 {window.location.search === '?page=pianokeys' && 'Pianokeys'}
 
@@ -47,28 +48,30 @@ const App = () => (
 
                 {window.location.search === '?page=traffic-lights-controlled' && 'Traffic lights controlled'}
 
-                {window.location.search === '?page=traffic-lights-auto' && 'Traffic lights auto'}
+                {/* {window.location.search === '?page=traffic-lights-auto' && 'Traffic lights auto'} */}
 
                 {window.location.search === '?page=live-clock' && 'Live Clock'}
 
-                {window.location.search === '?page=light-bulb' && 'Light bulb'}
+                {/* {window.location.search === '?page=light-bulb' && 'Light bulb'} */}
 
-                {window.location.search === '?page=address-book' && 'Address book'}
+                {/* {window.location.search === '?page=address-book' && 'Address book'} */}
 
                 {window.location.search === '?page=image-switcher' && 'Image switcher'}
 
                 {window.location.search === '?page=temperature-chart' && 'Temperature chart'}
+
+                {window.location.search === '?page=module-tabs' && 'Module tabs'}
             </div>
 
             {window.location.search === '' && <FrameForImagePage />}
 
-            {window.location.search === '?page=traffic-lights' && <TrafficLightsPage />}
+            {/* {window.location.search === '?page=traffic-lights' && <TrafficLightsPage />} */}
 
             {window.location.search === '?page=desktop-fan' && <DesktopFanPage />}
 
             {window.location.search === '?page=clock' && <ClockPage />}
 
-            {window.location.search === '?page=notifications' && <NotificationLinkPage />}
+            {/* {window.location.search === '?page=notifications' && <NotificationLinkPage />} */}
 
             {window.location.search === '?page=email-link' && <EmailLinkPage />}
 
@@ -80,7 +83,7 @@ const App = () => (
 
             {window.location.search === '?page=traffic-lights-controlled' && <TrafficLightsButtonPage />}    
 
-            {window.location.search === '?page=traffic-lights-auto' && <TrafficLightsAutoPage />}
+            {/* {window.location.search === '?page=traffic-lights-auto' && <TrafficLightsAutoPage />} */}
 
             {window.location.search === '?page=live-clock' && <LiveClockPage />}
 
@@ -94,11 +97,13 @@ const App = () => (
                 </div>    
             )} */}
 
-            {window.location.search === '?page=address-book' && <AddressBookPage />}
+            {/* {window.location.search === '?page=address-book' && <AddressBookPage />} */}
 
             {window.location.search === '?page=image-switcher' && <ImageSwitcherPage />}
 
             {window.location.search === '?page=temperature-chart' && <TemperatureChartPage />}
+
+            {window.location.search === '?page=module-tabs' && <ModuleTabsPage />}
         </div>
     </div>
 );

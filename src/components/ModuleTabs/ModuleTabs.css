@@ -1,0 +1,33 @@
+.module-tabs * {
+   box-sizing: border-box;
+}
+
+.module-tabs {
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.tab-navigation__button {
+    background-color: #05386B;
+    outline: none;
+    border: none;
+    padding: 12px 20px;
+    color: #EDF5E1;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.tab-navigation__button--selected {
+    background-color: #5CDB95;
+}
+
+.module-tabs__content {
+    min-height: 400px;
+    padding: 20px;
+    background-color: #5CDB95;
+    color: #05386B;
+    border-radius: 0px 5px 5px 5px;
+    font-size: 18px;
+}

@@ -17,7 +17,7 @@ class ImageSwitcher extends React.Component {
                 <div className='slider__uppersection'>
                     <div className='uppersection__side'>
                         <button 
-                            className='uppersection__side__arrow arrow--left'
+                            className={ 'uppersection__side__arrow arrow--left ' + (this.state.currentImage === 0 && 'arrow--disabled') }
                             onClick={() => {
                                 this.setState({
                                     currentImage: this.state.currentImage - 1
@@ -33,7 +33,7 @@ class ImageSwitcher extends React.Component {
 
                     <div className='uppersection__side'>
                         <button 
-                            className='uppersection__side__arrow arrow--right'
+                            className={ 'uppersection__side__arrow arrow--right ' + (this.state.currentImage === (this.props.children.length - 1) && 'arrow--disabled') }
                             onClick={() => {
                                 this.setState({
                                     currentImage: this.state.currentImage + 1

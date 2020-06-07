@@ -56,7 +56,7 @@ const Navigation = () => (
             Live Clock
         </a>
 
-        <a
+        {/* <a
             href="/?page=notifications"
             className={
                 'sidebar-navigation-item ' +
@@ -64,7 +64,7 @@ const Navigation = () => (
             }
         >
             Notifications
-        </a>
+        </a> */}
 
         <a
             href="/?page=email-link" 
@@ -126,7 +126,7 @@ const Navigation = () => (
             Traffic lights controlled auto
         </a>
 
-        <a
+        {/* <a
             href="/?page=address-book"
             className={
                 'sidebar-navigation-item ' +
@@ -134,7 +134,7 @@ const Navigation = () => (
             }    
         >
             Address book
-        </a>
+        </a> */}
 
         <a
             href="/?page=image-switcher"
@@ -154,6 +154,16 @@ const Navigation = () => (
             }    
         >
             Temperature chart
+        </a>
+
+        <a
+            href="/?page=module-tabs"
+            className={
+                'sidebar-navigation-item ' +
+                (window.location.search === '?page=module-tabs' && 'sidebar-navigation-item--active')
+            }    
+        >
+            Module Tabs
         </a>
 
     </div>
